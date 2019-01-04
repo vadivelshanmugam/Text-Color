@@ -8,11 +8,12 @@
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>
-		$.fn.greenify = function() {
-			this.css( "color", "green" );
+		$.fn.colorify = function(options) {
+            		var settings = $.extend({color: "green"}, options)
+			this.css( "color", settings.color );
 		};
 		 
-		$("a").greenify(); // Makes all the links green.
+		$("a").colorify();
 </script>
 </body>
 </html>
